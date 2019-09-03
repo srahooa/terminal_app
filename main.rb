@@ -2,11 +2,14 @@
 
 require "artii"
 require "colorize"
-require_relative "menus"
-# require_relative "obstacles"
+require_relative "texts"
+require_relative "obstacles"
 # require_relative "or_trail"
 
 welcome
+
+
+
 
 Obstacles.river("Kansas River")
 
