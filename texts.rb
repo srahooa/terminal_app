@@ -5,7 +5,6 @@ require "colorize"
 require_relative "obstacles"
 
 
-
 # welcome screen
 def welcome
     a = Artii::Base.new
@@ -58,16 +57,31 @@ def learn
     main_menu 
 end
 
-# to show the progression of time
+# FIRST DRARFT OF TRAVEL TO SHOW TIME PASSING
+# def travel
+#     "walking ... walking ... walking\nwalking ... walking ... walking\n".split(//).each do |c|
+#         sleep 0.1 
+#         print c 
+#     end
+# end
+
 def travel
-    "walking ... walking ... walking\nwalking ... walking ... walking\n".split(//).each do |c|
-        sleep 0.1 
-        print c 
+    distance = 0
+    until distance == 3
+        distance += 1
+        "walking ... walking ... walking\n".split(//).each do |c|
+            sleep 0.1 
+            print c 
+        end
     end
 end
 
 #crossing a river
-def river
+def river(name)
+    def initialize 
+        @name = name
+    end
+
     options = {
         "1": "Ford the river", 
         "2": "Caulk the wagon and float the river", 
@@ -76,7 +90,7 @@ def river
         
     obstacles = Obstacles.new(options)
         
-    puts "You have reached the __ river."
+    puts "You have reached the #{@name} river."
     puts obstacles.show
     pick = gets.chomp
         if pick == "1"
@@ -116,15 +130,11 @@ def ferry
     puts "You made it safely across!".colorize(:green)
 end
 
-def river_names
-    ["Kansas",
-    "Big Blue",
-    "Green"
-    "Snake"
-    ]
-end
-
-def fort
+def fort(name)
+    def initialize(name)
+        @name = name
+    end
+    
     options = {
         "1": "See what is for trade.", 
         "2": "Talk to a stranger.", 
@@ -133,7 +143,7 @@ def fort
         
     obstacles = Obstacles.new(options)
         
-    puts "You have reached the Fort ___."
+    puts "You have reached the Fort #{name}."
     puts obstacles.show
     pick = gets.chomp
         if pick == "1"
@@ -153,15 +163,7 @@ def fort
     travel
 end
 
-def fort_names
-    ["Kearney",
-    "Laramie",
-    "Hall",
-    "Boise",
-    "Walla Walla"
-    ]
-end
-
+#SEE WHATS UP FOR TRADE
 def trade
     trade = [
         "A woman is in need of 3 sets of clothing in exchange for one wagon wheel.",
@@ -173,7 +175,7 @@ def trade
     puts trade.sample
 end
 
-
+# ADVICE AND FUN FACTS FROM FELLOW TRAVELERS
 def speak 
     speak =[ 
     "A frantic wife tells you: It says right here in the Shively guidebook: “You must hire an Indian to pilot you at the crossing of the Snake river, it being dangerous if not perfectly understood. But my husband insists on crossing without a guide!”",
@@ -186,14 +188,37 @@ def speak
     puts speak.sample
 end 
 
-def landscape_names
-    ["Chimney Rock",
-    "Independence Rock",
-    "South Pass",
-    "Soda Springs",
-    "Blue Mountains",
-    "The Dalles"
-    ]
+def landscape(name)
+    def initialize(name)
+        @name = name
+    end
+    
+    options = {
+        "1": "See what is for trade.", 
+        "2": "Talk to a stranger.", 
+        "3": "Continue on the trail.", 
+    } 
+        
+    obstacles = Obstacles.new(options)
+        
+    puts "You have reached #{name}."
+    puts obstacles.show
+    pick = gets.chomp
+        if pick == "1"
+            system "clear"
+            trade
+        elsif pick == "2"
+            system "clear"
+            speak
+        elsif pick == "3"
+            system "clear"
+            travel
+        else
+            puts "Invalid input"
+        end
+    sleep(4)
+    system "clear"
+    travel
 end
 
 # when you die
