@@ -7,62 +7,60 @@ require_relative "obstacles"
 # require_relative "or_trail"
 
 welcome
-
-
-
-
-Obstacles.river("Kansas River")
+main_menu
+travel
+river("Kansas")
 
 travel
 
-Obstacles.river("Big Blue River")
+river("Big Blue River")
 
 travel 
 
-Obstacles.fort("Fort Kearney")  
+fort("Kearney")  
 
 travel 
 
-Obstacles.fort("Chimney Rock") 
+fort("Chimney Rock") 
 
 travel 
 
-Obstacles.fort("Fort Laramie")
+fort("Laramie")
 
 travel 
 
-Obstacles.landscape("Independence Rock")
+landscape("Independence Rock")
 
 travel 
 
-Obstacles.landscape("South pass") 
+landscape("South Pass") 
 
 travel 
 
-Obstacles.river("Green River")
+river("Green ")
 
 travel 
 
-Obstacles.river("Soda springs") 
+river("Springs") 
 
 travel 
 
-Obstacles.fort("Fort Hall")
+fort("Hall")
 
 travel 
 
-Obstacles.fort("Fort Boise")
+fort("Boise")
 
 travel 
 
-Obstacles.landscape("Blue Mountains")
+landscape("Blue Mountains")
 
 travel 
 
-Obstacles.fort("Fort Walla Walla")
+fort("Walla Walla")
 
 travel 
 
-Obstacles.river("The Dalles") 
+river("The Dalles") 
 
 made_it
