@@ -7,8 +7,11 @@ require_relative "obstacles"
 # require_relative "or_trail"
 
 welcome
+
 main_menu
+
 travel
+
 river("Kansas")
 
 travel

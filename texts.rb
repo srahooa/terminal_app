@@ -41,12 +41,11 @@ end
 
 # journey kickoff
 def travel_trail
-    puts "Exciting news! Please enter the name of your party learder"
+    puts "Exciting news! Please enter the name of your party learder."
     name = gets.chomp 
-    puts "Safe travels, #{name}. And good luck!!\nYou are departing in April in hopes of good weather."
-    puts "Press any key to continue"
-    input = gets
-    travel 
+    puts "Good luck #{name}!!\nYou are departing in April in hopes of good weather.\nFrom Independence, Missouri, your next stop is the Kansas River. Safe travels, #{name}!"
+    puts "Press 'Enter' to continue"
+    input = gets 
 end
 
 # details about trail only shown on main menu
@@ -77,9 +76,9 @@ def travel
 end
 
 #crossing a river
-def river(name)
+def river(river_name)
     def initialize 
-        @name = name
+        @river_name = river_name
     end
 
     options = {
@@ -90,7 +89,7 @@ def river(name)
         
     obstacles = Obstacles.new(options)
         
-    puts "You have reached the #{@name} river."
+    puts "You have reached the #{river_name} river."
     puts obstacles.show
     pick = gets.chomp
         if pick == "1"
@@ -107,7 +106,6 @@ def river(name)
         end
     sleep(4)
     system "clear"
-    travel
 end
 
 def ford
@@ -130,9 +128,9 @@ def ferry
     puts "You made it safely across!".colorize(:green)
 end
 
-def fort(name)
-    def initialize(name)
-        @name = name
+def fort(fort_name)
+    def initialize(fort_name)
+        @fort_name = fort_name
     end
     
     options = {
@@ -143,7 +141,7 @@ def fort(name)
         
     obstacles = Obstacles.new(options)
         
-    puts "You have reached the Fort #{name}."
+    puts "You have reached the Fort #{fort_name}."
     puts obstacles.show
     pick = gets.chomp
         if pick == "1"
@@ -160,7 +158,6 @@ def fort(name)
         end
     sleep(4)
     system "clear"
-    travel
 end
 
 #SEE WHATS UP FOR TRADE
@@ -186,6 +183,9 @@ def speak
     "Aunt Rebecca Sims tells you: “No butter or cheese or fresh fruit since Fort Laramie! Bless me, but i’d rather have my larder full of food back east than have our names carved on that rock! Well, tis a sight more cheery than all the graves we passed.",
     ]
     puts speak.sample
+    puts "Press 'Enter' to return to menu"
+    input = gets
+    system "clear"
 end 
 
 def landscape(name)
@@ -218,7 +218,6 @@ def landscape(name)
         end
     sleep(4)
     system "clear"
-    travel
 end
 
 # when you die
@@ -235,7 +234,7 @@ def made_it
     a = Artii::Base.new
     puts a.asciify("You Made It!!").colorize(:red)
     puts a.asciify("CONGRATULATIONS!!").colorize(:red)
-    puts "Press any key to return to menu"
+    puts "Press 'Enter' to return to menu"
     input = gets
     system "clear"
 end
