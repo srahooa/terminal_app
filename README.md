@@ -100,13 +100,13 @@ My current working understanding of Ruby has a lot of room for improvement. Whil
 4 Sept, 13:00-14:00 documentation
 4 Sept, 14:00- 17:00 finalising basic flow
 
-4 Sept, 19:00-21:00 documentation
 
 5 Sept, 8:30-12:00 implementing time tracker
 5 Sept, 13:00-17:00 reviewing optimising documentation and application. 
 
 ## Trello
 
+https://github.com/srahooa/terminal_app/blob/master/trello_4_9.jpg
   
 
 ## Testing
