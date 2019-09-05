@@ -17,4 +17,18 @@
 4 Sept, 13:00-14:00 documentation
 
 
+
+
 At this point I am making progress and know which direction I am heading. This is different from when I started the game and felt pretty lost. Testing my Obstacle class enabled me to properly display menus when a player reaches the main menu, a fort, or a natural feature. At this point I am working to complete the flow of the game so that a player can start and end the game. Next I would like to add a counter to display how many days between landmarks. The time log would enable bad weather and other random events to impact the total number of days it takes to travel the trail.
+
+
+## Progress Log 1: 5 Sept. 
+
+4 Sept, 14:00 - 17:00 developement of modules
+
+5 Sept, 8:00 - 12:00 Adding distances and trying to add a counter.
+
+5 Sept, 14:00 - 17:00 Working on documentation.
+
+I have had trouble conceptualising how to add a counter. And being so close to the deadline, I may leave this to be the next feature to be added for application improvement. Because I have a basic working code, I will be focusing on improving my documentation. This includes flushing out my README, commenting my code, and ensuring my development plan is coherent.
+Today I have tackled adding in additional values, forming a help menu, and pulling together the documentation. I have clearly outlined my weak points and improved my documentation. 

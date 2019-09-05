@@ -74,7 +74,7 @@ end
 def travel
     2.times do
         "walking ... walking ... walking\n".split(//).each do |c|
-        sleep 0.1 
+        sleep (0.1) 
         print c
         end
         system "clear"
@@ -82,7 +82,7 @@ def travel
 end
 
 #crossing a river
-def river(river_name)
+def river(river_name, distance)
     include Ford, Caulk, Ferry
     # def initialize 
     #     @river_name = river_name
@@ -96,7 +96,7 @@ def river(river_name)
         
     obstacles = Obstacles.new(options)
         
-    puts "You have reached the #{river_name} River.".colorize(:blue)
+    puts "You have reached the #{river_name} River. You have traveled #{distance} miles".colorize(:blue)
     puts obstacles.show
     pick = gets.chomp
         if pick == "1"
@@ -116,7 +116,7 @@ def river(river_name)
 end
 
 
-def fort(fort_name)
+def fort(fort_name, distance)
     include Trade, Speak
 
     # def initialize(fort_name)
@@ -131,7 +131,7 @@ def fort(fort_name)
         
     obstacles = Obstacles.new(options)
         
-    puts "You have reached the Fort #{fort_name}."
+    puts "You have reached Fort #{fort_name}. You have traveled #{distance} miles."
     puts obstacles.show
     pick = gets.chomp
         if pick == "1"
@@ -149,7 +149,7 @@ def fort(fort_name)
     system "clear"
 end
 
-def landscape(name)
+def landscape(name, distance)
     include Trade, Speak
     # def initialize(name)
     #     @name = name
@@ -163,7 +163,7 @@ def landscape(name)
         
     obstacles = Obstacles.new(options)
         
-    puts "You have reached #{name}."
+    puts "You have reached #{name}. You have travelend #{distance} miles."
     puts obstacles.show
     pick = gets.chomp
         if pick == "1"
@@ -202,21 +202,8 @@ def made_it
     main_menu
 end
 
-place_names = {"Kansas River": 102, 
-    "Big Blue River": 184,
-    "Fort Kearny": 302, 
-    "Chimney Rock": 302,
-    "Fort Laramie": 554, 
-    "Independence Rock": 774, 
-    "South Pass": 1009, 
-    "Green River": 1366, 
-    "Soda Springs": 1423, 
-    "Fort Hall": 1565, 
-    "Snake River": 1622,
-    "Fort Boise": 1802,
-    "Blue Mountains": 1915, 
-    "The Dalles": 2100,
-     }
+
+
 
 #MOVED TO MODULE FILES TO CLEAN UP THIS FILE
 # def ford

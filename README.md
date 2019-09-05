@@ -28,13 +28,12 @@ Throughout the game, the date, weather, and health score (Very Poor, Poor, Fair,
 welcome screen
 -user names character
 -user inputs to decide course of action
--tracking of the date and distance of travel
 -random generator that outputs obstacles- ie. health challenges, equipment breakage, severe weather
 -user can quit at any time.
 
 -   ascii messages
--   progress bar
-- colorize
+-   randomize 
+-   colorize
 
 ## Growth.
 
@@ -42,6 +41,7 @@ stripped down version of Oregon Trail
 
 Future editions can add features such as player budget, a store to buy supplies, hunting to supplement food rations, speed and ration scales, and additional trails to travel. The original game suggests a traveling party of three additional players. This too could be added to a later version.
 
+-tracking of the date and distance of travel
 
 ## Code Structure
 
@@ -49,17 +49,15 @@ The MVP is structured into the following files
 
 -   main.rb
 -   obstacles.rb
--   tracker.rb
 -   methods.rb
 
  
 
 ## Code Structure / Gems
 
-   Artii (for title)
--   Random (for catastrophes)
--   Progress Bar (distance traveled along the trail)
-- Colorize
+-   Artii (for title)
+-   Faker (for names of those passing on advice)
+-   Colorize
 
 ## Build Status
 
@@ -72,7 +70,7 @@ This project was commenced on Monday 2 September and completed on Friday 6 Septe
 1.  Download and install ruby
 2.  Download and unzip the OregonTrail files on your computer.
 3.  Use the terminal to install the bundler gem.
-4.  Run the program by entering main.rb
+4.  Run the program by entering 'ruby main.rb' in your terminal
 
   
 
@@ -86,7 +84,7 @@ After deciding the basic structure of the program, I began to code elements and 
 
 ## Difficulties?
 
-I kept talking myself in circles. I found it difficult to reduce the challenge to the root problem and work up. 
+My current working understanding of Ruby has a lot of room for improvement. While I understand the basic principles, I found it difficult to pull all the pieces together. Quite honestly, I kept talking myself in circles. The upside to this much  
   
 
 ## Timeline
