@@ -67,7 +67,7 @@ def learn
     main_menu 
 end
 
-def help
+def help #BASIC HOW TO MENU
     puts "\nHELP: \n\nAs you move throughout the Oregon Trail use your number keys to make your choice.\nOnce you have entered the number of your choice, press 'return'.\nIf you are looking to leave the game immediately, press your 'control' and 'c' keys simultaneously. Otherwise, you will have the option when you reach a landmark."
     puts "\nPress 'Enter' to return to the main menu."
     input = gets
@@ -76,7 +76,7 @@ def help
 end
 
 #TRAVEL IS MEANT TO SHOW TIME PASSING, ENSURING THE PLAYER RECOGNIZES THAT THEY ARE WALKING FOR DAYS.
-def travel
+def travel #USED TO GIVE THE ALLUSION THAT TIME IS PASSING
     2.times do
         "walking ... walking ... walking\n".split(//).each do |c|
         sleep (0.1) 
@@ -101,7 +101,7 @@ def river(river_name, distance)     #ALLOWS FOR VARIABLES SIGNIFYING THE ACTUAL 
     # days = Days.new(distance)
         
     puts "You have reached the #{river_name} River. You have traveled #{distance} miles\n".colorize(:blue)
-    puts "Phew, you've been on the trail #{distance/12} days! Keep on going.\n".colorize(:orange)
+    puts "Phew, you've been on the trail #{distance/12} days! Keep on going.\n".colorize(:yellow)
     sleep(1)
     puts obstacles.show
     pick = gets.chomp
@@ -139,7 +139,7 @@ def fort(fort_name, distance)           #ALLOWS FOR VARIABLES SIGNIFYING THE ACT
     obstacles = Obstacles.new(options)  #CALLS IN THE CLASS THAT ENABLES THE MENU
         
     puts "You have reached Fort #{fort_name}. You have traveled #{distance} miles.\n"       #EDUCATING THE PLAYER
-    puts "\nPhew, you've been on the trail #{distance/12} days! Keep on going.\n".colorize(:oragne)    
+    puts "\nPhew, you've been on the trail #{distance/12} days! Keep on going.\n".colorize(:yellow)    
     sleep(1)
     puts obstacles.show         #DISPLAYS THE MENU    
     pick = gets.chomp
@@ -176,7 +176,7 @@ def landscape(name, distance)   #ALLOWS FOR VARIABLES SIGNIFYING THE ACTUAL SITE
     obstacles = Obstacles.new(options)  #CALLS IN THE CLASS THAT ENABLES THE MENU
         
     puts "You have reached #{name}. You have travelend #{distance} miles.\n" #EDUCATING THE PLAYER
-    puts "\nPhew, you've been on the trail #{distance/12} days! Keep on going.".colorize(:oragne)    
+    puts "\nPhew, you've been on the trail #{distance/12} days! Keep on going.".colorize(:yellow)    
     sleep(1)
     puts obstacles.show     #DISPLAYS THE MENU 
     pick = gets.chomp

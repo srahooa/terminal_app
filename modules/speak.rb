@@ -1,5 +1,5 @@
-require "faker"
-
+require "faker"                     #PROVIDES AMUSEMENT BY GENERATING RANDOM NAMES. AND YODA SPEAK- JUST FOR FUN. 
+require "colorize"                  #COLORIZING TITLES AND CERTAIN OPTIONS
 module Speak
     def speak 
         speak =[ 
@@ -10,11 +10,12 @@ module Speak
         "A mormon traveler named, #{Faker::Name.name} tells you: My family and I travel with 40 other families to the valley of the Great Salt Lake to seek religious freedom. Back east, Mormons are persecuted. In Utah, we’ll join together to build a new community, changing desert into farmland.",
         "#{Faker::Name.name} tells you: “No butter or cheese or fresh fruit since Fort Laramie! Bless me, but i’d rather have my larder full of food back east than have our names carved on that rock! Well, tis a sight more cheery than all the graves we passed.",
         "#{Faker::Name.name} tells you: #{Faker::Quote.yoda}"]
-        puts speak.sample.colorize(:purple) 
+
+        puts speak.sample.colorize(:yellow) 
         puts "\nPress 'Enter' to return to the trail."
-        input = gets
-        #puts "Press 'Enter' to return to menu"
-        #input = gets
+        
+        input = gets        #GIVES USER THE TIME TO READ ON THEIR OWN TIMEFRAME
+        
         system "clear"
     end 
 end

@@ -1,4 +1,7 @@
-module Caulk#Cleaning up code, pulling modules into separate files.
+require "colorize"                  #COLORIZING TITLES AND CERTAIN OPTIONS
+
+
+module Caulk #PRESENTS RESULTS FOR YOUR CHOICE IN HOW TO CROSS THE RIVER
     def caulk
         caulk = [
         "You made it safely across!",
@@ -9,8 +12,8 @@ module Caulk#Cleaning up code, pulling modules into separate files.
         
         if caulk_result == "You made it safely across!"
             puts "You made it safely across!".colorize(:green)
-            sleep (1)
-        elsif caulk_result == "Your wagon capsized!"
+            sleep (1)       #DELAY BEFORE MOVING ON TO PROVIDE TIME TO READ
+        elsif caulk_result == "Your wagon capsized!" #THE CURRENT WAY TO DIE ON THE TRAIL
             puts "Your wagon capsized!".colorize(:red)
             sleep (1)
             you_lose

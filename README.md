@@ -59,18 +59,26 @@ The MVP is structured into the following files
     -trade.rb
     -speak.rb
 
- 
+The obstacles class is used to formulate menus. The menus are used for the player to choose how they would like to proceed on the trail. The menus then call methods that return a verdict from their choice. 
+
+https://github.com/srahooa/terminal_app/blob/master/DevPlan.jpg
+https://github.com/srahooa/terminal_app/blob/master/code_structure.jpg
 
 ## Code Structure / Gems
 
+Required to play:
 -   Artii (for title)
 -   Faker (for names of those passing on advice)
 -   Colorize
+
+Used in development:
 -   Test-unit.
 
 ## Build Status
 
 This project was commenced on Monday 2 September and completed on Friday 6 September. It has been tested and designed to process and deal with errors. It has the potential to be developed further.
+
+The project as seen on 
 
   
 
