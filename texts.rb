@@ -72,13 +72,12 @@ end
 # end
 
 def travel
-    distance = 0
-    until distance == 3
-        distance += 1
+    2.times do
         "walking ... walking ... walking\n".split(//).each do |c|
-            sleep 0.1 
-            print c 
+        sleep 0.1 
+        print c
         end
+        system "clear"
     end
 end
 
@@ -97,7 +96,7 @@ def river(river_name)
         
     obstacles = Obstacles.new(options)
         
-    puts "You have reached the #{river_name} river.".colorize(:blue)
+    puts "You have reached the #{river_name} River.".colorize(:blue)
     puts obstacles.show
     pick = gets.chomp
         if pick == "1"
@@ -112,7 +111,7 @@ def river(river_name)
         else
             puts "Invalid input"
         end
-    sleep(4)
+    sleep(2)
     system "clear"
 end
 
@@ -143,11 +142,10 @@ def fort(fort_name)
             pick.speak
         elsif pick == "3"
             system "clear"
-            travel
         else
             puts "Invalid input"
         end
-    sleep(4)
+    sleep(2)
     system "clear"
 end
 
@@ -176,11 +174,10 @@ def landscape(name)
             pick.speak
         elsif pick == "3"
             system "clear"
-            travel
         else
             puts "Invalid input"
         end
-    sleep(4)
+    sleep(2)
     system "clear"
 end
 
@@ -197,13 +194,29 @@ end
 # when you win / make it to Oregon City 
 def made_it
     a = Artii::Base.new
-    puts a.asciify("You Made It!!").colorize(:red)
+    puts a.asciify("You Made it to Oregon City!!").colorize(:red)
     puts a.asciify("CONGRATULATIONS!!").colorize(:red)
     puts "Press 'Enter' to return to menu"
     input = gets
     system "clear"
     main_menu
 end
+
+place_names = {"Kansas River": 102, 
+    "Big Blue River": 184,
+    "Fort Kearny": 302, 
+    "Chimney Rock": 302,
+    "Fort Laramie": 554, 
+    "Independence Rock": 774, 
+    "South Pass": 1009, 
+    "Green River": 1366, 
+    "Soda Springs": 1423, 
+    "Fort Hall": 1565, 
+    "Snake River": 1622,
+    "Fort Boise": 1802,
+    "Blue Mountains": 1915, 
+    "The Dalles": 2100,
+     }
 
 #MOVED TO MODULE FILES TO CLEAN UP THIS FILE
 # def ford

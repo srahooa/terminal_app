@@ -9,5 +9,20 @@ module Trade
             "A family is in need of 1 ox in exchange for 2 wagon wheels.",
         ]
         puts trade.sample
+        sleep (3)
+
+        #AMBITION, TALKING MYSELF IN CIRCLES
+
+        # puts "Do you want to trade?  [Y]es or [N]o"
+        # input = gets
+        # input == "y" || "n"
+        # while true
+        #     if input == "n"
+        #     puts "Bummer. Oh, well. Onwards!"
+        #     break
+        # else input =="y"
+        #     puts "Great, your new supplies have been added to your haul."
+        #     break
+        # end
     end
 end
