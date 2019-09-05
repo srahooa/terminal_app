@@ -2,15 +2,18 @@
 module Trade
     def trade
         trade = [
-            "A woman is in need of 3 sets of clothing in exchange for one wagon wheel.",
-            "A man is in need of 1 ox in exchange for 600 rounds of ammunition.",
-            "A gentleman is in search of 15 kilos of food in exchange for one wagon axel.",
-            "An old lady is in need of 1 wagon tongue in exchange for 3 sets of clothing.",
-            "A family is in need of 1 ox in exchange for 2 wagon wheels.",
-        ]
+            "A woman is in need of 3 sets of clothing in exchange for one wagon wheel.".colorize(:purple),
+            "A man is in need of 1 ox in exchange for 600 rounds of ammunition.".colorize(:purple),
+            "A gentleman is in search of 15 kilos of food in exchange for one wagon axel.".colorize(:purple),
+            "An old lady is in need of 1 wagon tongue in exchange for 3 sets of clothing.".colorize(:purple),
+            "A family is in need of 1 ox in exchange for 2 wagon wheels.".colorize(:purple),
+            ]
         puts trade.sample
-        sleep (3)
-
+        
+        puts "\nPress 'Enter' to return to the trail."
+        input = gets
+        system "clear"
+        
         #AMBITION, TALKING MYSELF IN CIRCLES
 
         # puts "Do you want to trade?  [Y]es or [N]o"

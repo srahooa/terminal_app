@@ -21,27 +21,29 @@ The Oregon Trail is a single player game which presents a months long journey in
 
 From the opening screen users will choose between learning about the Oregon Trail and embarking on the trail. If the select learning about the trail, they will be presented with text that describes what they are to encounter. Once they choose “Travel the Trail” they will select their names, occupations, and date they start their journey. The occupation does not currently affect the outcome, however in future versions this could affect a players ability to purchase supplies.
 
-Throughout the game, the date, weather, and health score (Very Poor, Poor, Fair, Good, Very good) will be tracked. A user will be able to travel 12 miles (19.3 km) in a day. The game automatically travels the trail, though may randomly present challenge such as broken equipment which will cause a player to be delayed by a few days. When a player reaches a landmark, usually a fort or a river, they will be presented with option on how to proceed.
+Throughout the game, the user will progress along the Oregon Trail, much as pioneers in the United States did in the 1840s. A user will be able to travel 12 miles (19.3 km) in a day. The game automatically travel the trail, stopping at landmarks along the way. When a player reaches a landmark; a fort, landmark, or a river, they will be presented with option on how to proceed. Not all options are created equal. You could die. 
 
 ## Prototype features
+-welcome screen
+-User names character
+-User inputs decide course of action
+-User can quit at any time
+-User encounters landmarks on the trail
+-Random generator that outputs obstacles- ie. health challenges, equipment breakage, severe weather
 
-welcome screen
--user names character
--user inputs to decide course of action
--random generator that outputs obstacles- ie. health challenges, equipment breakage, severe weather
--user can quit at any time.
 
 -   ascii messages
 -   randomize 
 -   colorize
+-   test/unit
 
-## Growth.
+## Growth
 
-stripped down version of Oregon Trail
+The current version is a stripped down version of the Oregon Trail game.
 
 Future editions can add features such as player budget, a store to buy supplies, hunting to supplement food rations, speed and ration scales, and additional trails to travel. The original game suggests a traveling party of three additional players. This too could be added to a later version.
 
--tracking of the date and distance of travel
+Tracking of the number of days on the trail was initially part of the project scope, but due to limited technical abilities, it has not been included in this version. 
 
 ## Code Structure
 
@@ -49,7 +51,13 @@ The MVP is structured into the following files
 
 -   main.rb
 -   obstacles.rb
--   methods.rb
+-   text.rb
+-   Modules
+    -caulk.rb
+    -ferry.rb
+    -ford.rb
+    -trade.rb
+    -speak.rb
 
  
 
@@ -58,6 +66,7 @@ The MVP is structured into the following files
 -   Artii (for title)
 -   Faker (for names of those passing on advice)
 -   Colorize
+-   Test-unit.
 
 ## Build Status
 
@@ -100,28 +109,37 @@ My current working understanding of Ruby has a lot of room for improvement. Whil
 4 Sept, 13:00-14:00 documentation
 4 Sept, 14:00- 17:00 finalising basic flow
 
-
 5 Sept, 8:30-12:00 implementing time tracker
 5 Sept, 13:00-17:00 reviewing optimising documentation and application. 
 
-## Trello
+6 Sept, 8:00-10:00 compiling presentation
+6 Sept, 16:00 submission.
 
+## Trello
+Trello is a product management tool which has allowed for the management of tasks. Using a board dedicated to this project, I was able to outline user stories, tests, and specific tickets I was working on, done with, or still neede to tackle.
+
+The links provided demonstrate different times during the duration of this project.
 https://github.com/srahooa/terminal_app/blob/master/trello_4_9.jpg
   
 
 ## Testing
 
+The Obastacle class was tested to make sure that the menus that appear throughout the game appear properly. 
   
 
 ## Accessibility
 
-The Oregon Trail game was designed to be as clear and accessible as possible. Unfortunately at this time the game is not adaptable for sight impaired users. This is an area for improvement.
-
+The Oregon Trail game was designed to be as clear and accessible as possible. Unfortunately at this time the game is not adaptable for sight impaired users. This, as well as added functions, are areas for improvement. Additionally, the game is played in english. No attempts at translations have been attempted. 
+The game has not been tested with a target audience and is in its beta stage.  
 
 ## Copyright, Ethical, & Social Issues
 
-As the inspiration for this game was published in 1990 I would like to offer my sincere thanks to Ed Gratz, Charolyn Kappling, Mark Paquette, Larry Phenow, and Julie Redland. 
+As the inspiration for this game, The Oregon Trail, which was published in 1990 I would like to offer my sincere thanks to Ed Gratz, Charolyn Kappling, Mark Paquette, Larry Phenow, and Julie Redland. 
+The game is based off the 1840s westward expansion in the United States. All the landmarks and forts are real places where pioneers would stop, trade, and often have troubles. Disease, theft, and death were common along the trail. On a preliminary level, this game can be used as an educational tool.
 
 
 ## License
+(c) 2019 Sarah Aldrich for Coder Academy. 
+This code is provided as is. It available for use, copy, adaptation, publication and distribution. 
+There is no warranty. 
 

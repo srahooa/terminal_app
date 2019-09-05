@@ -8,13 +8,13 @@ module Ford #Cleaning up code, pulling modules into separate files.
      
         if ford_result == "You made it safely across!"
             puts "You made it safely across!".colorize(:green)
-            sleep (2)
+            sleep (1)
         elsif ford_result == "Uh, oh, you got stuck in the mud."
             puts "Uh, oh, you got stuck in the mud!".colorize(:yellow)
-            sleep (2)
+            sleep (1)
         else 
             puts "Oh no! Some of your food floated away.".colorize(:yellow)
-            sleep (2)
+            sleep (1)
         end
     end
 end
