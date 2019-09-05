@@ -16,60 +16,57 @@ welcome
 
 main_menu
 
-travel
-
-river("Kansas")
 
 travel
 
-river("Big Blue")
+river("Kansas", 102)
+
+travel
+
+river("Big Blue", 184)
 
 travel 
 
-fort("Kearney")  
+fort("Kearney", 302)  
 
 travel 
 
-fort("Chimney Rock") 
+fort("Chimney Rock", 416) 
 
 travel 
 
-fort("Laramie")
+fort("Laramie", 554)
 
 travel 
 
-landscape("Independence Rock")
+landscape("Independence Rock", 774)
 
 travel 
 
-landscape("South Pass") 
+landscape("South Pass", 1009) 
 
 travel 
 
-river("Green")
+river("Green", 1366)
 
 travel 
 
-river("Springs") 
+river("Springs", 1423) 
 
 travel 
 
-fort("Hall")
+fort("Hall", 1565)
 
 travel 
 
-fort("Boise")
+fort("Boise", 1802)
 
 travel 
 
-landscape("Blue Mountains")
+landscape("Blue Mountains", 1915)
 
 travel 
 
-fort("Walla Walla")
-
-travel 
-
-river("The Dalles") 
+river("The Dalles", 2100) 
 
 made_it
