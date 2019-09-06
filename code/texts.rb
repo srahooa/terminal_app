@@ -35,16 +35,16 @@ def main_menu       #INITIAL GAME PLAY OPTIONS
     puts "Welcome to the Oregon Trail Redux"
     puts obstacles.show         #PRESENTS THE MENU
     pick = gets.chomp
-    if pick == "1"              #PLAYER PICKS 1 AND YOURE DIRECTED TO THE TRAVEL_TRAIL METHOD TO GET YOU STARTED
-        travel_trail
-    elsif pick == "2"           #PLAYER PICKS 2 AND YOURE DIRECTED TO INFORMATION ABOUT THE TRAIL
-        learn
-    elsif pick == "3"           
-        help                    #PRESENTS PLAYER WITH A HOW-TO MENU
-    elsif pick == "4"
-        exit                    #YOU CAN LEAVE THE GAME GRACEFULLY
-    else
-        puts "Invalid input"
+        if pick == "1"              #PLAYER PICKS 1 AND YOURE DIRECTED TO THE TRAVEL_TRAIL METHOD TO GET YOU STARTED
+            travel_trail
+        elsif pick == "2"           #PLAYER PICKS 2 AND YOURE DIRECTED TO INFORMATION ABOUT THE TRAIL
+            learn
+        elsif pick == "3"           
+            help                    #PRESENTS PLAYER WITH A HOW-TO MENU
+        elsif pick == "4"
+            exit                    #YOU CAN LEAVE THE GAME GRACEFULLY
+        else
+            puts "Invalid input"
         main_menu
     end
 end
@@ -143,20 +143,20 @@ def fort(fort_name, distance)           #ALLOWS FOR VARIABLES SIGNIFYING THE ACT
     sleep(1)
     puts obstacles.show         #DISPLAYS THE MENU    
     pick = gets.chomp
-    case pick 
-        when "1"          #PLAYER PICKS 1 AND YOURE PRESENTED WITH A RANDOM OCCURENCE FROM TRADE
-            system "clear"
-            pick.trade
-        when "2"       #PLAYER PICKS 2 AND YOURE PRESENTED WITH A RANDOM OCCURENCE FROM SPEAK
-            system "clear"
-            pick.speak
-        when "3"       #PLAYER PICKS 3 AND YOU CONTINUE ON THE TRAIL
-            system "clear"
-        when "4"
-            exit
-        else
-            puts "Invalid input. You're back to the trail." 
-    end
+        case pick 
+            when "1"          #PLAYER PICKS 1 AND YOURE PRESENTED WITH A RANDOM OCCURENCE FROM TRADE
+                system "clear"
+                pick.trade
+            when "2"       #PLAYER PICKS 2 AND YOURE PRESENTED WITH A RANDOM OCCURENCE FROM SPEAK
+                system "clear"
+                pick.speak
+            when "3"       #PLAYER PICKS 3 AND YOU CONTINUE ON THE TRAIL
+                system "clear"
+            when "4"
+                exit
+            else
+                puts "Invalid input. You're back to the trail." 
+        end
     sleep(2)
     system "clear"
     travel
